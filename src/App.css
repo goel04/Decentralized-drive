@@ -1,0 +1,193 @@
+/* Base styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  background: linear-gradient(135deg, #1f4037, #99f2c8);
+  background-image: url('https://source.unsplash.com/1600x900/?nature,water'); /* Replace this URL with your preferred image */
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+/* App styles */
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 30vmin;
+  pointer-events: none;
+  animation: App-logo-bounce 2s ease-in-out infinite alternate;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 15s linear;
+  }
+}
+
+/* Header styles */
+.App-header {
+  background-color: rgba(31, 27, 36, 0.8); /* Semi-transparent background */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #f0f0f0;
+  position: relative;
+  z-index: 2;
+}
+
+.App-header:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle, rgba(63,94,251,0.3) 0%, rgba(252,70,107,0.3) 100%);
+  opacity: 0.7;
+  z-index: -1;
+}
+
+.App-link {
+  color: #61dafb;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.App-link:hover {
+  color: #21a1f1;
+}
+
+/* Keyframes for animations */
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes App-logo-bounce {
+  from { transform: translateY(0); }
+  to { transform: translateY(-20px); }
+}
+
+/* Background gradient animations */
+.bg {
+  animation: slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #ff5858 50%, #fbda61 50%);
+  bottom: 0;
+  left: -50%;
+  opacity: 0.7;
+  position: fixed;
+  right: -50%;
+  top: 0;
+  z-index: -1;
+}
+
+.bg2 {
+  animation-direction: alternate-reverse;
+  animation-duration: 4s;
+}
+
+.bg3 {
+  animation-duration: 5s;
+}
+
+/* Content styles */
+.content {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  padding: 5vmin;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.content:hover {
+  transform: translate(-50%, -50%) scale(1.05);
+}
+
+/* Header with curved effect */
+header {
+  text-align: center;
+  width: 100%;
+  height: auto;
+  background: linear-gradient(to right, #ff758c, #ff7eb3);
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0 0 85% 85% / 30%;
+  padding-bottom: 100px;
+}
+
+header .overlay {
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  color: #fff;
+  text-shadow: 1px 1px 2px #000;
+  background: linear-gradient(135deg, rgba(159,5,255,0.6) 10%, rgba(253,94,8,0.6) 100%);
+}
+
+/* Typography enhancements */
+h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 70px;
+  margin-bottom: 30px;
+  animation: fadeInDown 1s ease forwards;
+}
+
+h3, p {
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 20px;
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+/* Button styles */
+.share {
+  padding: 16px;
+  margin-top: 10px;
+  vertical-align: center;
+  background: #ff6f61;
+  width: 100px;
+  height: 50px;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 14px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.share:hover {
+  background: #ff3e2f;
+  transform: scale(1.1);
+}
+
+/* Keyframes for fade-in animations */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Background slide animation */
+@keyframes slide {
+  0% { transform: translateX(-25%); }
+  100% { transform: translateX(25%); }
+}
